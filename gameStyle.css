@@ -1,0 +1,134 @@
+div#GameTitle {
+    font-family: Digital-7;
+    font-size: 50px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+div#userName {text-align:  center;font-size: 30px;padding: 5px;background-color: #85c3ef;}
+
+div#generalState {
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #cbcbcb;
+}
+
+div#roundViewer {
+    display: grid;
+    grid-template-columns: 35% auto;
+    border: 1px dashed black;
+}
+
+div#answers {
+    grid-row: 2;
+    display: flex;
+    flex-flow: column;
+}
+
+div#index {
+    grid-row: 1;
+    padding: 2px;
+}
+
+div#checks {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+    flex-flow: column;
+}
+
+.Results > * {
+    display: inline-flex;
+    margin: 0 14px 0 0;
+    align-items: center;
+}
+
+.Round:last-child {
+    margin-top: 25px;
+    width: max-content;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 0 0px;
+    border: none;
+}
+
+.Round, .Results {
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid black;
+    padding: 5px;
+    min-height: 25px;
+    /* display: table-row; */
+    align-items: center;
+    grid-area: A;
+}
+
+.placeHolder {
+    width: 10px;
+    height: 10px;
+    border: 1px solid #c7c7c7;
+    background-color: grey;
+    border-radius: 10px;
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.Round > p {
+    margin: 0;
+}
+
+.Round:last-child > * {
+    display: inline-block;
+}
+
+div#roundViewer > * {
+    padding: 5px;
+}
+
+p.correct:before {
+    display: inline-flex;
+    content: "\2713";
+    color: white;
+    border: 1px solid green;
+    background-color: green;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+p.badPosition:before {
+    display: inline-flex;
+    content: "\2713";
+    color: white;
+    background-color: orange;
+    border: 1px solid orange;
+    border-radius: 15px;
+    width: 20px;
+    height: 20px;
+    align-content: center;
+    justify-content: center;
+    margin-right: 4px;
+}
+
+div.placeHolder:first-child {
+}
+
+.Round:last-child > * {
+    margin: 0 5px 0 0;
+}
+
+#answers:before {content: "";height: 21px;}
+
+@media only screen and (max-width: 577px) {
+    .Round, .Results {
+      min-height: 45px;
+      padding: 0;
+    }
+
+    .Round input {
+      width: 50%;
+    }
+}
